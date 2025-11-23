@@ -1,3 +1,6 @@
+# University Management System Class Diagram
+
+```mermaid
 classDiagram
     class User {
         -userID: String
@@ -45,11 +48,8 @@ classDiagram
         +processPayment()
     }
 
-    %% Inheritance
     User <|-- Student
     User <|-- Professor
-
-    %% Associations
     Student "0..*" -- "0..*" Course : enrolls
     Course "1" o-- "0..*" Enrollment : contains
     Student "1" o-- "0..*" Enrollment : has
